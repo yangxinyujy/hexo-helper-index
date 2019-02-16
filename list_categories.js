@@ -69,7 +69,7 @@ function listCategoriesHelper(categories, options) {
 
       result += `<li class="${className}-list-item${additionalClassName}">`;
 
-      result += `<a class="${className}-list-link${isCurrent ? ' current' : ''}" href="${self.url_for(cat.path)}${suffix}"index.html>`;
+      result += `<a class="${className}-list-link${isCurrent ? ' current' : ''}" href="${self.url_for(cat.path)}${suffix}index.html">`;
       result += transform ? transform(cat.name) : cat.name;
       result += '</a>';
 
@@ -93,7 +93,7 @@ function listCategoriesHelper(categories, options) {
     prepareQuery(parent).forEach((cat, i) => {
       if (i || level) result += separator;
 
-      result += `<a class="${className}-link" href="${self.url_for(cat.path)}${suffix}"index.html>`;
+      result += `<a class="${className}-link" href="${self.url_for(cat.path)}${suffix}index.html">`;
       result += transform ? transform(cat.name) : cat.name;
 
       if (showCount) {
